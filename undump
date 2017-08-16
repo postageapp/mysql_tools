@@ -52,12 +52,11 @@ class Undumper
       begin
         c = database_config
         Mysql2::Client.new(
-          c['host'] || 'localhost',
-          c['username'] || 'mysql',
-          c['password'] || '',
-          '',
-          c['port'],
-          c['socket']
+          host: c['host'] || 'localhost',
+          username: c['username'] || 'mysql',
+          password: c['password'] || '',
+          port: c['port'],
+          socket: c['socket']
         )
       end
   end
