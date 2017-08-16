@@ -51,7 +51,7 @@ class Undumper
     @connection ||=
       begin
         c = database_config
-        Mysql.new(
+        Mysql2.new(
           c['host'] || 'localhost',
           c['username'] || 'mysql',
           c['password'] || '',
